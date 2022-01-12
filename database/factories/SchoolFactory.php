@@ -2,10 +2,11 @@
 
 namespace Database\Factories;
 
+use App\Models\School;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\School>
+ * @extends Factory
  */
 class SchoolFactory extends Factory
 {
@@ -14,10 +15,11 @@ class SchoolFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         return [
-            //
+            'name' => '星绘云川中学',
+            'type' => School::TYPE_STANDALONE,
         ];
     }
 }

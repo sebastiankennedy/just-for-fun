@@ -15,7 +15,11 @@ return new class extends Migration
     {
         Schema::create('schools', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique()->comment('名称');
+            $table->enum('type', ['standalone', 'group', 'affiliate'])->comment('类型');
+            $table->string('logo')->nullable()->comment('logo');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
