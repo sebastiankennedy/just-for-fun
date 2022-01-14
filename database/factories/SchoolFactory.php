@@ -18,7 +18,7 @@ class SchoolFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => '星绘云川中学',
+            'name' => $this->faker->company(),
             'type' => School::TYPE_STANDALONE,
         ];
     }

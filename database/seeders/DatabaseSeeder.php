@@ -2,7 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\AcademicYear;
+use App\Models\School;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,6 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(SchoolSeeder::class);
+        $school = School::factory()
+            ->make()
+            ->create(['name' => '轮椅飞行中学']);
+
+        $academicYear = AcademicYear::factory()
+            ->for($school)
+            ->create(['name' => '2021-2022学年']);
     }
 }

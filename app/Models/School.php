@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class School extends Model
@@ -19,7 +20,7 @@ class School extends Model
         self::TYPE_AFFILIATE => '区域/教育集团分校',
     ];
 
-    public $fillable = ['name', 'type', 'logo'];
+    public $guarded = [];
 
     public $casts = [
         'name' => 'string',
@@ -30,4 +31,9 @@ class School extends Model
     public $attributes = [
         'type' => self::TYPE_STANDALONE,
     ];
+
+    public function academicYear(): HasMany
+    {
+        return $this->hasMany(AcademicYear::class);
+    }
 }
