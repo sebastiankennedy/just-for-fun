@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\AcademicYear;
 use App\Models\School;
+use App\Models\Semester;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,5 +23,13 @@ class DatabaseSeeder extends Seeder
         $academicYear = AcademicYear::factory()
             ->for($school)
             ->create(['name' => '2021-2022学年']);
+
+        $semesterOne = Semester::factory()
+            ->for($academicYear)
+            ->create(['name' => '2021-2022学年上学期']);
+
+        $semesterTwo = Semester::factory()
+            ->for($academicYear)
+            ->create(['name' => '2021-2022学年下学期']);
     }
 }
