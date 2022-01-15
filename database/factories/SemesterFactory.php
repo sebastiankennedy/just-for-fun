@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Semeter>
  */
-class SemeterFactory extends Factory
+class SemesterFactory extends Factory
 {
     /**
      * Define the model's default state.

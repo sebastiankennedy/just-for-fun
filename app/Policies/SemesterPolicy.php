@@ -6,7 +6,7 @@ use App\Models\Semeter;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class SemeterPolicy
+class SemesterPolicy
 {
     use HandlesAuthorization;
 

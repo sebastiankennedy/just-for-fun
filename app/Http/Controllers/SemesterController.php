@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreSemeterRequest;
-use App\Http\Requests\UpdateSemeterRequest;
-use App\Models\Semeter;
+use App\Http\Requests\StoreSemesterRequest;
+use App\Http\Requests\UpdateSemesterRequest;
+use App\Models\Semester;
 
-class SemeterController extends Controller
+class SemesterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class SemeterController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreSemeterRequest  $request
+     * @param  \App\Http\Requests\StoreSemesterRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSemeterRequest $request)
+    public function store(StoreSemesterRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class SemeterController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Semeter  $semeter
+     * @param  \App\Models\Semester  $semeter
      * @return \Illuminate\Http\Response
      */
-    public function show(Semeter $semeter)
+    public function show(Semester $semeter)
     {
         //
     }
@@ -53,10 +53,10 @@ class SemeterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Semeter  $semeter
+     * @param  \App\Models\Semester  $semeter
      * @return \Illuminate\Http\Response
      */
-    public function edit(Semeter $semeter)
+    public function edit(Semester $semeter)
     {
         //
     }
@@ -64,11 +64,11 @@ class SemeterController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateSemeterRequest  $request
-     * @param  \App\Models\Semeter  $semeter
+     * @param  \App\Http\Requests\UpdateSemesterRequest  $request
+     * @param  \App\Models\Semester  $semeter
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSemeterRequest $request, Semeter $semeter)
+    public function update(UpdateSemesterRequest $request, Semester $semeter)
     {
         //
     }
@@ -76,10 +76,10 @@ class SemeterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Semeter  $semeter
+     * @param  \App\Models\Semester  $semeter
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Semeter $semeter)
+    public function destroy(Semester $semeter)
     {
         //
     }
