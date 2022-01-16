@@ -25,10 +25,12 @@ class DatabaseSeeder extends Seeder
             ->create(['name' => '2021-2022学年']);
 
         $semesterOne = Semester::factory()
+            ->for($school)
             ->for($academicYear)
             ->create(['name' => '2021-2022学年上学期']);
 
         $semesterTwo = Semester::factory()
+            ->for($school)
             ->for($academicYear)
             ->create(['name' => '2021-2022学年下学期']);
     }

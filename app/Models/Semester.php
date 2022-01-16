@@ -4,19 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Semester extends Model
 {
     use HasFactory, SoftDeletes;
 
-    public function academicYear()
+    public function academicYear(): belongsTo
     {
-        $this->belongsTo(AcademicYear::class);
+        return $this->belongsTo(AcademicYear::class);
     }
 
-    public function school()
+    public function school(): belongsTo
     {
-        $this->belongsTo(School::class);
+        return $this->belongsTo(School::class);
     }
 }

@@ -17,7 +17,11 @@ class SemesterFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'school_id' => $this->faker->numberBetween(1, 10),
+            'academic_year_id' => $this->faker->numberBetween(1, 10),
+            'name' => $this->faker->sentence,
+            'started_at' => $this->faker->dateTime,
+            'ended_at' => $this->faker->dateTime,
         ];
     }
 }
